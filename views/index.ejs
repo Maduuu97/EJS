@@ -1,0 +1,27 @@
+
+<body>
+    <%- include("partials/header.ejs") %>
+<div class="container">
+    <h1>To do List <%= whichDay %> :</h1>
+    <form class="item" action="/" method="POST">
+        <input type="text" class="textbox" name="newItem" placeholder="Add to list" autocomplete="off">
+        <button type="submit" name="button">Add</button>
+     </form>
+   <ul class="list">
+    <li><input type="checkbox"><span>Make the Bed</span></li>
+    <li><input type="checkbox"><span>Clean the house</span></li>
+    <li><input type="checkbox"><span>Go to Gym</span></li>
+    <li><input type="checkbox"><span>Learn 2 lesson from Duolingo</span></li>
+    <li><input type="checkbox"><span>One task Udemy To Do</span></li>
+     <% for (var i = 0; i < newListItems.length ; i++) { %>
+        <li> <input type="checkbox"><span><%= newListItems[i] %> </span></li>
+    <% } %>
+   </ul>
+</div>
+<%- include("partials/footer.ejs") %>
+</body>
+
+
+
+
+

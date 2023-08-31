@@ -1,0 +1,16 @@
+<body>
+    <%- include("partials/header.ejs") %>
+<div class="container">
+    <h1>FOR WORK : </h1>
+    <form class="item" action="/work" method="POST">
+        <input type="text" class="textbox" name="newItem" placeholder="Add to list" autocomplete="off">
+        <button type="submit" name="button">Add</button>
+     </form>
+   <ul class="list">
+     <% for (var i = 0; i < newListWork.length ; i++) { %>
+        <li> <input type="checkbox"><span><%= newListWork[i] %> </span></li>
+    <% } %>
+   </ul>
+</div>
+   <%- include("partials/footer.ejs") %>
+</body>
